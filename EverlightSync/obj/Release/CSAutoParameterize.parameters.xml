@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="EverlightDbEntities-Web.config Connection String" description="EverlightDbEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/EverlightDb.csdl|res://*/EverlightDb.ssdl|res://*/EverlightDb.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(local);initial catalog=EverlightDb;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Mumf\\Documents\\Everlight\\Misc\\EverlightSync\\EverlightSync\\EverlightSync\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EverlightDbEntities']/@connectionString" />
+  </parameter>
+  <parameter name="SqlError-Web.config Connection String" description="SqlError Connection String used in web.config by the application to access the database." defaultValue="Data Source=localhost;Initial Catalog=EverlightDb;User Id=sa;Password=Password1;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Mumf\\Documents\\Everlight\\Misc\\EverlightSync\\EverlightSync\\EverlightSync\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SqlError']/@connectionString" />
+  </parameter>
+</parameters>
