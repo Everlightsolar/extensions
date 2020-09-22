@@ -1,0 +1,73 @@
+{
+  "manifest_version": 2,
+  "name": "Everlight Solar",
+  "short_name": "Everlight",
+  "version": "3.0.8",
+  "description": "The Everlight Solar extension helps users get the necessary contact information and then fill out a form on some sites.",
+  "icons": {
+    "16": "img/logo_everlightsolar_16.png",
+    "32": "img/logo_everlightsolar_32.png",
+    "48": "img/logo_everlightsolar_48.png",
+    "128": "img/logo_everlightsolar_128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "img/logo_everlightsolar_16.png",
+      "32": "img/logo_everlightsolar_32.png",
+      "48": "img/logo_everlightsolar_48.png",
+      "128": "img/logo_everlightsolar_128.png"
+    }
+  },
+  "author": "Alexey Sachavichyk",
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "https://login.salesforce.com/*",
+    "https://*.salesforce.com/*",
+    "https://*.force.com/*",
+    "https://*.powerclerk.com/*",
+    "https://apsystemsema.com/*"
+  ],
+  "content_scripts": [
+    {
+      "permissions": ["https://*/*"],
+      "run_at": "document_end",
+      "matches": ["https://*.powerclerk.com/*"],
+      "css": ["css/content.css"],
+      "js": [
+        "js/listener.js",
+        "js/content.js"
+      ],
+      "all_frames": false
+    },
+    {
+      "permissions": ["https://*/*"],
+      "run_at": "document_end",
+      "matches": ["https://apsystemsema.com/*"],
+      "css": ["css/content.css"],
+      "js": [
+        "js/listener.js",
+        "js/content.js"
+      ],
+      "all_frames": true
+    },
+    {
+      "permissions": ["https://*/*"],
+      "run_at": "document_end",
+      "matches": ["https://novapowerportal.com/*"],
+      "css": ["css/content.css"],
+      "js": [
+        "js/listener.js",
+        "js/content.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}

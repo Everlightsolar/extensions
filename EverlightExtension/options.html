@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/options.css" />
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="logo">
+      <img src="img/logo_salesforce.svg" alt="Salesforce logo" class="company__logo">
+    </div>
+    <div class="title">Extensions options</div>
+    <div class="content">
+      <div id="content__wrapper">
+        <div class="item">
+          <div class="label">Client Id (Consumer Key)</div>
+          <input type="text" name="client_id" id="client_id">
+        </div>
+        <div class="item">
+          <div class="label">Redirect URL (Callback URL)</div>
+          <input type="text" name="redirect_url" id="redirect_url">
+        </div>
+        <div class="item">
+          <div class="label">Client Secret (Consumer Secret)</div>
+          <input type="password" name="client_secret" id="client_secret">
+        </div>
+        <div class="item display__flex">
+          <span id="variable_button" title="Show table of variable">Variable</span>
+          <span id="logout_button" title="Log out and clear all data">Log out</span>
+        </div>
+        <button id="save_options">Save Options</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="variable_wrapper">
+    <div class="content">
+      <div id="close_modal">close</div>
+      <table id="variable_table"></table>
+    </div>
+  </div>
+
+  <div id="modalWindow">
+    <div class="content"><span id="modalMessage"></span></div>
+  </div>
+
+</body>
+<script src="js/utils.js"></script>
+<script src="options.js"></script>
+
+</html>
